@@ -8,19 +8,19 @@ import java.util.stream.Collectors;
 
 public class CarServiceImpl implements CarService{
 
-    public List <Car> carList(Integer count) {
-         List<Car> carList;
+    public List <Car> carListToTable(Integer count) {
+         List<Car> carListToTable;
 
         {
-            carList = new ArrayList<>();
+            carListToTable = new ArrayList<>();
 
-            carList.add(new Car("VAZ", "white", 2110));
-            carList.add(new Car("BMW", "black", 5));
-            carList.add(new Car("GAZ", "silver", 3110));
-            carList.add(new Car("UAZ", "brown", 1));
-            carList.add(new Car("Audi", "red", 100));
+            carListToTable.add(new Car("VAZ", "white", 2110));
+            carListToTable.add(new Car("BMW", "black", 5));
+            carListToTable.add(new Car("GAZ", "silver", 3110));
+            carListToTable.add(new Car("UAZ", "brown", 1));
+            carListToTable.add(new Car("Audi", "red", 100));
 
-            return carList.stream().limit(count).collect(Collectors.toList());
+            return carListToTable.stream().limit(count).collect(Collectors.toList());
         }
     }
 
